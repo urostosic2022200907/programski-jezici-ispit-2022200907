@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Biblioteka</title>
+</head>
+<body onload="dohvatiBiblioteke()">
+    <div class="app">
+        <main>
+            <h1>Biblioteke</h1>
+            <table>
+                <thead id="imenaKolonaBibloteke">
+                    <tr>
+                        <th>Ime</th>
+                        <th>Adresa</th>
+                        <th>Izaberi</th>
+                    </tr>
+                </thead>
+                <tbody id="biblioteke">
+                </tbody>
+            </table>
+        </main>
+        <div class="form-container">
+            <h2>Registruj novu biblioteku:</h2>
+            <span>Ime biblioteke:</span>
+            <input type="text" id="imeBiblioteke" placeholder="Ime...">
+            <span>Adresa biblioteke:</span>
+            <input type="text" id="adresaBiblioteke" placeholder="Adresa...">
+            <button onclick="registrujBiblioteku()">Registruj</button>
+        </div>
+
+        <span id="trenutnaBiblioteka" hidden></span>
+        <h1>Knjige</h1>
+        <table id="imenaKolonaKnjiga">
+            <thead>
+                <tr>
+                    <th>Vreme Dodavanja</th>
+                    <th>Ime</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody id="knjige">
+            </tbody>
+        </table>
+        <footer style="margin-left: 20px;">
+            Ukupna cena: <span id="ukupnaCena"></span>
+        </footer>
+
+        <input type="text" placeholder="Ime knjige" id="imeKnjige">
+        <input type="number" placeholder="Cena knjige" id="cenaKnjige">
+        <button onclick="dodajKnjigu()">Dodaj</button>
+
+    </div>
+</body>
+</html>
